@@ -3,7 +3,7 @@ function Footer() {
   return (
     <section>
       <div className="border border-[#1CBCCF]/40 rounded-t-[100px] md:rounded-t-[200px] pt-16">
-        <div className="flex flex-wrap   justify-between px-5 sm:px-16 lg:px-40 xl:px-52 2xl:px-60">
+        <div className="flex flex-wrap justify-between px-5 sm:px-16 lg:px-40 xl:px-52 2xl:px-60">
           <div className="w-[300px] space-y-5">
             <img src={logo} className="w-60" alt="" />
             <p>
