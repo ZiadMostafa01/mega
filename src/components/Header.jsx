@@ -1,9 +1,9 @@
 import { useState } from "react";
 import logo from "../assets/images/logo.png";
-
+import { useNavigate } from "react-router-dom";
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <header className="relative">
       <div className="px-5 sm:px-16 lg:px-40 xl:px-52 2xl:px-60 pb-2">
@@ -13,10 +13,16 @@ function Header() {
           </a>
 
           <div className="hidden md:block space-x-5">
-            <button className="cursor-pointer border-2 border-[#1CBCCF] hover:bg-[#d4fbff] transition duration-300 rounded-full px-7 py-2">
+            <button
+              onClick={() => navigate("/dashboard")}
+              className="cursor-pointer border-2 border-[#1CBCCF] hover:bg-[#d4fbff] transition duration-300 rounded-full px-7 py-2"
+            >
               LOGIN
             </button>
-            <button className="cursor-pointer border-2 border-[#1CBCCF] hover:bg-[#d4fbff] transition duration-300 rounded-full px-7 py-2">
+            <button
+              onClick={() => navigate("/dashboard")}
+              className="cursor-pointer border-2 border-[#1CBCCF] hover:bg-[#d4fbff] transition duration-300 rounded-full px-7 py-2"
+            >
               REGISTER
             </button>
           </div>
@@ -137,10 +143,16 @@ function Header() {
         </div>
 
         <div className="flex justify-center gap-4 pt-3 border-t border-gray-200">
-          <button className="cursor-pointer border-2 border-[#1CBCCF] text-[#1CBCCF] hover:bg-[#d4fbff] transition duration-300 rounded-full px-6 py-2">
+          <button
+            onClick={() => navigate("/dashboard")}
+            className="cursor-pointer border-2 border-[#1CBCCF] text-[#1CBCCF] hover:bg-[#d4fbff] transition duration-300 rounded-full px-6 py-2"
+          >
             LOGIN
           </button>
-          <button className="cursor-pointer border-2 border-[#1CBCCF] text-[#1CBCCF] hover:bg-[#d4fbff] transition duration-300 rounded-full px-6 py-2">
+          <button
+            onClick={() => navigate("/dashboard")}
+            className="cursor-pointer border-2 border-[#1CBCCF] text-[#1CBCCF] hover:bg-[#d4fbff] transition duration-300 rounded-full px-6 py-2"
+          >
             REGISTER
           </button>
         </div>
