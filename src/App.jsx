@@ -1,24 +1,20 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Statistics from "./components/Statistics";
-import OurServices from "./components/OurServices";
-import RecentPosts from "./components/RecentPosts";
-import Footer from "./components/Footer";
+import Landing from "./pages/landing";
+import { Routes, Route } from "react-router-dom";
+import Dashboardlayout from "./layouts/DashboardLayout";
+import MainContent from "./pages/dashboard/MainContent";
 
-function App(){
-    return (
-      <div>
-        <Header />
-        <Hero />
-        <div className="h-36"></div>
-        <Statistics />
-        <div className="h-36"></div>
-        <OurServices />
-        <div className="h-36"></div>
-        <RecentPosts/>
-        <div className="h-36"></div>
-        <Footer/>
-      </div>
-    );
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/dashboard" element={<Dashboardlayout />}>
+        <Route index element={<MainContent />} />
+        <Route path="test" element={<h1>test test</h1>} />
+      </Route>
+
+      {/* <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} /> */}
+    </Routes>
+  );
 }
 export default App;

@@ -1,4 +1,4 @@
-import post from "../assets/images/Post.png";
+import post from "../../assets/images/Post.png";
 
 function RecentPosts() {
   const posts = [

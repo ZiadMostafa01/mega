@@ -1,4 +1,4 @@
-import bg from "../assets/images/OurServices-background.png";
+import bg from "../../assets/images/OurServices-background.png";
 
 function OurServices() {
   return (
